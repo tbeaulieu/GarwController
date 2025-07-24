@@ -4,4 +4,4 @@ iOS apps die after 7 days to prevent sideloading, so you have to rebuild + conne
 
 If it's not changing anything, force quit the app and reload it, making sure you're on the GARW wifi.
 
-<img width="1125" height="2436" alt="image" src="https://github.com/user-attachments/assets/31e7f68d-eca5-4f8b-94fc-08e816c61e29" />
+<img width="277" height="600" alt="image" src="https://github.com/user-attachments/assets/31e7f68d-eca5-4f8b-94fc-08e816c61e29" />
