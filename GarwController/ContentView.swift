@@ -6,19 +6,41 @@
 //
 
 import SwiftUI
+import AVFoundation
+
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    let udp = UDPClient()
 
-#Preview {
-    ContentView()
+    var body: some View {
+        ZStack{
+            Image("bkg")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 0) {                
+                ControlButton(imageName: "up", soundName: "click", action: {
+                    udp.sendCommand("0101")
+                }).frame(width: 60, height: 121)
+                HStack(spacing:0) {
+                    ControlButton(imageName: "left", soundName: "click", action: {
+                        udp.sendCommand("0104")
+                    }).frame(width: 90, height: 60)
+                    Spacer().frame(width: 40)
+                    ControlButton(imageName: "right", soundName: "click", action: {
+                        udp.sendCommand("0108")
+                    }).frame(width: 90, height: 60)
+                }
+                ControlButton(imageName: "down", soundName: "click", action: {
+                    udp.sendCommand("0102")
+                }).frame(width: 60, height: 90)
+                Spacer()
+                       .frame(height: 100)
+                
+                ControlButton(imageName: "settingsButton", soundName: "settings", action: { udp.enterSettings()}).frame(width: 300, height: 87)
+            }
+            .padding()
+        }
+    }
 }
