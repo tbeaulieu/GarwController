@@ -1,4 +1,4 @@
-This is a simple GARW iOS mostly "vibe coded" app (I'm not an iPhone dev) based upon Dustin Sterkenburg's node.js script. I added a few sounds and made a very basic interface so far. 
+This is a simple GARW iOS mostly "vibe coded" app (I'm not an iPhone dev) based upon Dustin Sterkenburg's (https://github.com/dustinsterk) node.js script. I added a few sounds and made a very basic interface so far. 
 
 iOS apps die after 7 days to prevent sideloading, so you have to rebuild + connect every so often.
 
